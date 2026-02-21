@@ -1,0 +1,265 @@
+/* ===============================
+   GLOBAL CINEMA STYLE
+=================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+body {
+  min-height: 100vh;
+  color: #f5f5f5;
+  background:
+    linear-gradient(rgba(10,10,10,0.85), rgba(10,10,10,0.92)),
+    url("shiny-film-negative-cinema-background-with-text-space_1017-52787.avif")
+    no-repeat center center/cover;
+}
+
+/* ===============================
+   BACK BUTTON
+=================================*/
+.back-btn {
+  position: fixed;
+  top: 25px;
+  right: 40px;
+  text-decoration: none;
+  padding: 8px 18px;
+  border: 1px solid rgba(255,215,0,0.6);
+  color: gold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: gold;
+  color: black;
+}
+
+/* ===============================
+   NAVBAR (FILM TITLE STYLE)
+=================================*/
+.navbar {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.logo {
+  font-size: 28px;
+  letter-spacing: 4px;
+  color: gold;
+  font-weight: bold;
+}
+
+.navbar nav {
+  margin-top: 15px;
+}
+
+.navbar nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 14px;
+  letter-spacing: 3px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: gold;
+}
+
+/* ===============================
+   HERO (MOVIE POSTER STYLE)
+=================================*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  gap: 60px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: gold;
+  letter-spacing: 3px;
+}
+
+.hero-text p {
+  line-height: 1.9;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  transition: 0.4s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   MAIN LAYOUT (FILM PANELS)
+=================================*/
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+/* ===============================
+   SIDEBAR (GENRE MENU STYLE)
+=================================*/
+.sidebar {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-left: 4px solid gold;
+}
+
+.sidebar h3 {
+  margin-bottom: 20px;
+  color: gold;
+  letter-spacing: 2px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 0;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.sidebar a:hover {
+  color: gold;
+  padding-left: 8px;
+}
+
+/* ===============================
+   CONTENT (SCRIPT PANEL STYLE)
+=================================*/
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.page {
+  background: rgba(0,0,0,0.6);
+  padding: 35px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,215,0,0.2);
+}
+
+.page h2 {
+  color: gold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* FORM STYLE */
+.page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: black;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-family: inherit;
+}
+
+.page input:focus {
+  outline: none;
+  border-color: gold;
+}
+
+/* CINEMA BUTTON */
+#saveBtn {
+  padding: 12px;
+  background: gold;
+  border: none;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#saveBtn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   TABLE (CAST LIST STYLE)
+=================================*/
+.table-area {
+  margin-top: 60px;
+  padding: 40px 10%;
+}
+
+.table-area h2 {
+  color: gold;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0,0,0,0.7);
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+}
+
+th {
+  color: gold;
+  letter-spacing: 2px;
+}
+
+tr:hover {
+  background: rgba(255,215,0,0.1);
+}
+
+/* ===============================
+   UTIL
+=================================*/
+.hidden {
+  display: none;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+@media(max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image img {
+    margin-top: 30px;
+  }
+}

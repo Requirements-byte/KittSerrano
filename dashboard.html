@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio | Personal Portfolio</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+
+  <a href="index.html" class="back-btn">← Back to Login</a>
+
+
+  <header class="navbar">
+    <div class="logo">Kitt Serrano </div>
+    <nav>
+      <a href="#">DRIVES</a>
+      <a href="#">CHARACTER</a>
+      <a href="#">ACTION</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>About My Journey</h1>
+      <p>There are times when I feel uncertain about what my true passion is and what direction my future will take. Like many students, I sometimes find myself questioning whether I am on the right path or if there is something else I am meant to pursue. The feeling of confusion can be overwhelming, especially when thinking about long-term goals and career choices.
+
+Despite these uncertainties, I continue to pursue my course in web development with determination and an open mind. I believe that exploration is an important part of growth. By learning different skills, working on projects, and facing challenges, I am slowly discovering where my strengths lie and what truly excites me. Each experience teaches me more about myself—what I enjoy, what I struggle with, and where I perform best.
+
+Rather than seeing confusion as a weakness, I see it as part of the journey. It pushes me to keep learning, experimenting, and improving. Through web development, I am not only building technical skills but also gaining clarity about my abilities and potential. I may not have all the answers yet, but I am committed to growing, discovering my passion, and shaping a future that reflects my strengths and dedication.</p>
+      </div>
+    <div class="hero-image">
+      <img src=images.png>
+    </div>
+  </section>
+
+
+  <div class="container">
+
+
+    <div class="sidebar">
+      <h3>Sidebar</h3>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('help')">Help</a>
+      <a onclick="exitSystem()">Exit</a>
+    </div>
+
+    <div class="content">
+
+      <div id="home" class="page">
+        <h2>Person Information</h2>
+        <input id="fname" placeholder="First Name">
+        <input id="mname" placeholder="Middle Name">
+        <input id="lname" placeholder="Last Name">
+        <input id="age" type="number" placeholder="Age">
+        <input id="gmail" placeholder="Email">
+        <button id="saveBtn">Save 🔒</button>
+      </div>
+
+
+      <div id="contact" class="page hidden">
+        <h2>Contact</h2>
+        <p>facebook: https://www.facebook.com/kitt.serrano.2025</p>
+      </div>
+
+
+      <div id="about" class="page hidden">
+        <h2>About</h2>
+        <p>I commit daily to strengthening my programming skills through regular practice and practical application. By embracing new challenges, exploring diverse programming languages, and building meaningful projects, I steadily deepen my understanding and sharpen my analytical abilities. This consistent effort improves my technical competence while also encouraging creativity and flexibility, allowing me to write more efficient, well-structured code and stay aligned with technological advancements. With determination and continuous growth, I am progressively transforming from a beginner into a confident and capable developer.
+
+</p>
+      </div>
+
+
+      <div id="help" class="page hidden">
+        <h2>Help</h2>
+Enter your personal information into the provided form fields. After clicking the “Save” button, the system will automatically record your details and show them in the table below. This makes it easy to view and manage your submitted information in a clear and organized way.      </div>
+    </div>
+
+
+    <div class="table-area">
+      <h2>Persons Data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>FIRST NAME</th>
+            <th>MIDDLE NAME</th>
+            <th>LAST NAME</th>
+            <th>AGE</th>
+            <th>EMAIL</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
